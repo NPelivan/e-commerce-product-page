@@ -1,0 +1,7 @@
+@import "./assets/scss/typography";
+
+:host {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 16px;
+}

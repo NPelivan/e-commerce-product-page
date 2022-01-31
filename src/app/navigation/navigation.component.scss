@@ -1,0 +1,19 @@
+@use "../assets/scss/colors" as *;
+.navbar {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  border-bottom: 1px solid $grayishBlue;
+
+  &__navbar-nav {
+    display: flex;
+    list-style-type: none;
+    width: 70%;
+
+    &__item {
+      margin-right: 5%;
+    }
+  }
+}
