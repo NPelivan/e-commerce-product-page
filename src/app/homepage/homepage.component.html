@@ -1,7 +1,11 @@
 <section class="main-container">
   <div class="main-container__item">
     <div class="main-container__item__image-big">
-      <img src="../../assets/images/image-product-1.jpg" alt="Product 1" />
+      <img
+        (click)="popupImage = true"
+        src="../../assets/images/image-product-1.jpg"
+        alt="Product 1"
+      />
     </div>
 
     <div div class="main-container__item__image-small">
@@ -21,6 +25,13 @@
         src="../../assets/images/image-product-4-thumbnail.jpg"
         alt="Product 4"
       />
+    </div>
+  </div>
+
+  <div class="popup-window" *ngIf="popupImage">
+    <div class="popupImage">
+      <a class="close" (click)="popupImage = false">&times;</a>
+      <img src="../../assets/images/image-product-1.jpg" alt="Product 1" />
     </div>
   </div>
 
