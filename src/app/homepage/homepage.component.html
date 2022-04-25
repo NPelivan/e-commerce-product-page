@@ -1,29 +1,32 @@
 <section class="main-container">
   <div class="main-container__item">
     <div class="main-container__item__image-big">
-      <img
-        (click)="popupImage = true"
-        src="../../assets/images/image-product-1.jpg"
-        alt="Product 1"
-      />
+      <img (click)="popupImage = true" [src]="image" alt="Product" />
     </div>
 
-    <div div class="main-container__item__image-small">
+    <div class="main-container__item__image-small">
       <img
+        (click)="firstImage()"
         src="../../assets/images/image-product-1-thumbnail.jpg"
-        alt="Product 1"
+        height="100"
       />
+
       <img
+        (click)="secondImage()"
         src="../../assets/images/image-product-2-thumbnail.jpg"
-        alt="Product 2"
+        height="100"
       />
+
       <img
+        (click)="thirdImage()"
         src="../../assets/images/image-product-3-thumbnail.jpg"
-        alt="Product 3"
+        height="100"
       />
+
       <img
+        (click)="fourthImage()"
         src="../../assets/images/image-product-4-thumbnail.jpg"
-        alt="Product 4"
+        height="100"
       />
     </div>
   </div>
@@ -31,7 +34,45 @@
   <div class="popup-window" *ngIf="popupImage">
     <div class="popupImage">
       <a class="close" (click)="popupImage = false">&times;</a>
-      <img src="../../assets/images/image-product-1.jpg" alt="Product 1" />
+      <div>
+        <img
+          src="../../assets/images/icon-previous.svg"
+          height="10"
+          width="10"
+          alt="Previous image"
+        />
+        <img [src]="image" alt="Product 1" />
+        <img
+          (click)="nextImage()"
+          src="../../assets/images/icon-next.svg"
+          height="50"
+          width="10"
+          alt="Next image"
+        />
+      </div>
+    </div>
+
+    <div class="main-container__item__image-small popup-small">
+      <img
+        (click)="firstImage()"
+        src="../../assets/images/image-product-1-thumbnail.jpg"
+        alt="Product 1"
+      />
+      <img
+        (click)="secondImage()"
+        src="../../assets/images/image-product-2-thumbnail.jpg"
+        alt="Product 2"
+      />
+      <img
+        (click)="thirdImage()"
+        src="../../assets/images/image-product-3-thumbnail.jpg"
+        alt="Product 3"
+      />
+      <img
+        (click)="fourthImage()"
+        src="../../assets/images/image-product-4-thumbnail.jpg"
+        alt="Product 4"
+      />
     </div>
   </div>
 
