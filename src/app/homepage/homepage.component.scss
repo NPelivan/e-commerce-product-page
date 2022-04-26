@@ -41,7 +41,7 @@
       justify-content: center;
       flex-direction: column;
 
-      a {
+      .close {
         text-align: right;
         width: 45%;
         font-size: 50px;
@@ -49,15 +49,37 @@
         cursor: pointer;
       }
 
-      a:hover {
+      .close:hover {
         color: hsl(26, 100%, 55%);
       }
 
-      img {
-        width: 45%;
-        text-align: center;
+      .image-container {
+        display: flex;
         align-items: center;
-        border-radius: 10px;
+        justify-content: center;
+        .shoe-image {
+          width: 45%;
+          text-align: center;
+          align-items: center;
+          border-radius: 10px;
+        }
+
+        .arrow {
+          background-color: $white;
+          padding: 1.5%;
+          border-radius: 100%;
+          cursor: pointer;
+        }
+
+        .arrow:nth-of-type(1) {
+          position: relative;
+          left: 2%;
+        }
+
+        .arrow:nth-of-type(3) {
+          position: relative;
+          right: 2%;
+        }
       }
     }
   }

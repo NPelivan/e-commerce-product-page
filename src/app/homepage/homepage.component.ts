@@ -29,7 +29,24 @@ export class HomepageComponent implements OnInit {
   nextImage() {
     if (this.image === '../../assets/images/image-product-1.jpg') {
       this.secondImage();
-      debugger;
+    } else if (this.image === '../../assets/images/image-product-2.jpg') {
+      this.thirdImage();
+    } else if (this.image === '../../assets/images/image-product-3.jpg') {
+      this.fourthImage();
+    } else if (this.image === '../../assets/images/image-product-4.jpg') {
+      this.firstImage();
+    }
+  }
+
+  previousImage() {
+    if (this.image === '../../assets/images/image-product-4.jpg') {
+      this.thirdImage();
+    } else if (this.image === '../../assets/images/image-product-3.jpg') {
+      this.secondImage();
+    } else if (this.image === '../../assets/images/image-product-2.jpg') {
+      this.firstImage();
+    } else if (this.image === '../../assets/images/image-product-1.jpg') {
+      this.fourthImage();
     }
   }
 

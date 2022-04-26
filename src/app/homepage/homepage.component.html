@@ -34,19 +34,18 @@
   <div class="popup-window" *ngIf="popupImage">
     <div class="popupImage">
       <a class="close" (click)="popupImage = false">&times;</a>
-      <div>
+      <div class="image-container">
         <img
+          (click)="previousImage()"
+          class="arrow"
           src="../../assets/images/icon-previous.svg"
-          height="10"
-          width="10"
           alt="Previous image"
         />
-        <img [src]="image" alt="Product 1" />
+        <img class="shoe-image" [src]="image" alt="Product 1" />
         <img
           (click)="nextImage()"
+          class="arrow"
           src="../../assets/images/icon-next.svg"
-          height="50"
-          width="10"
           alt="Next image"
         />
       </div>
