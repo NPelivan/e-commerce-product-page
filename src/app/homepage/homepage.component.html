@@ -91,11 +91,11 @@
 
     <div class="main-container__item__number-container">
       <div class="main-container__item__number-container__counter">
-        <button>
-          <img src="../../assets/images/icon-minus.svg" alt="Plus button" />
+        <button (click)="decreaseItem()">
+          <img src="../../assets/images/icon-minus.svg" alt="Minus button" />
         </button>
-        <span>0</span>
-        <button>
+        <span>{{ items }}</span>
+        <button (click)="increaseItem()">
           <img src="../../assets/images/icon-plus.svg" alt="Plus button" />
         </button>
       </div>

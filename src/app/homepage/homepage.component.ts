@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
   popupImage = false;
+  items = 0;
+
+  constructor() {}
+
+  ngOnInit(): void {}
 
   image: any = '../../assets/images/image-product-1.jpg';
 
@@ -50,7 +55,13 @@ export class HomepageComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  increaseItem() {
+    return (this.items = this.items + 1);
+  }
 
-  ngOnInit(): void {}
+  decreaseItem() {
+    if (this.items > 0) {
+      return (this.items = this.items - 1);
+    }
+  }
 }
