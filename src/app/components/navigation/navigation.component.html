@@ -9,7 +9,20 @@
   </ul>
 
   <div class="navbar__icons">
-    <img src="../../assets/images/icon-cart.svg" alt="Cart icon" />
-    <img src="../../assets/images/image-avatar.png" alt="Avatar icon" />
+    <div>
+      <img
+        (click)="cartPopup = !cartPopup"
+        src="../../assets/images/icon-cart.svg"
+        alt="Cart icon"
+      />
+      <span></span>
+      <app-cart *ngIf="cartPopup"></app-cart>
+    </div>
+
+    <img
+      class="avatar"
+      src="../../assets/images/image-avatar.png"
+      alt="Avatar icon"
+    />
   </div>
 </nav>

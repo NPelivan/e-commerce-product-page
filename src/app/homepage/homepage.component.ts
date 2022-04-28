@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomepageComponent implements OnInit {
   popupImage = false;
   items = 0;
+  inCartItem: any;
+  totalProducts: any;
+  notification: any = false;
 
   constructor() {}
 
@@ -64,4 +67,14 @@ export class HomepageComponent implements OnInit {
       return (this.items = this.items - 1);
     }
   }
+
+  addToCart() {
+    if (this.items > 0) {
+      this.inCartItem = true;
+      this.totalProducts = this.items * 125.0;
+      this.notification = true;
+    }
+  }
+
+  inCartItems() {}
 }
