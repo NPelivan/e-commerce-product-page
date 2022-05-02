@@ -91,16 +91,19 @@
 
     <div class="main-container__item__number-container">
       <div class="main-container__item__number-container__counter">
-        <button (click)="decreaseItem()">
+        <button (click)="appService.decreaseItem()">
           <img src="../../assets/images/icon-minus.svg" alt="Minus button" />
         </button>
-        <span>{{ items }}</span>
-        <button (click)="increaseItem()">
+        <span>{{ appService.items }}</span>
+        <button (click)="appService.increaseItem()">
           <img src="../../assets/images/icon-plus.svg" alt="Plus button" />
         </button>
       </div>
 
-      <button class="main-container__item__number-container__add-to-cart">
+      <button
+        (click)="addToCart()"
+        class="main-container__item__number-container__add-to-cart"
+      >
         <img src="../../assets/images/icon-cart.svg" alt="Add to cart" />
         Add to cart
       </button>

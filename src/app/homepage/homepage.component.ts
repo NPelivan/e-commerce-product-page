@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AppServiceService } from '../services/app-service.service';
 
 @Component({
   selector: 'app-homepage',
@@ -7,12 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
   popupImage = false;
-  items = 0;
-  inCartItem: any;
-  totalProducts: any;
-  notification: any = false;
-
-  constructor() {}
+  @Input() items!: number;
+  constructor(public appService: AppServiceService) {}
 
   ngOnInit(): void {}
 
@@ -59,22 +56,14 @@ export class HomepageComponent implements OnInit {
   }
 
   increaseItem() {
-    return (this.items = this.items + 1);
+    this.appService.increaseItem();
   }
 
   decreaseItem() {
-    if (this.items > 0) {
-      return (this.items = this.items - 1);
-    }
+    this.appService.decreaseItem();
   }
 
   addToCart() {
-    if (this.items > 0) {
-      this.inCartItem = true;
-      this.totalProducts = this.items * 125.0;
-      this.notification = true;
-    }
+    this.appService.addToCart();
   }
-
-  inCartItems() {}
 }
