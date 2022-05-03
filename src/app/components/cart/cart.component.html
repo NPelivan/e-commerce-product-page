@@ -2,10 +2,10 @@
   <h1>Cart</h1>
 
   <div>
-    <span>Your cart is empty.</span>
+    <p>Your cart is empty.</p>
   </div>
 
-  <div>
+  <div *ngIf="appService.inCartItem">
     <div>
       <img
         src="../../../assets/images/image-product-1-thumbnail.jpg"
@@ -14,7 +14,10 @@
 
       <div>
         <p>Fall Limited Edition Sneakers</p>
-        <span>$125.00 x </span>
+        <span
+          >$125.00 x <span>{{ appService.numberOfItems }}</span>
+          <strong>${{ appService.totalProducts }}</strong>
+        </span>
       </div>
 
       <img src="../../../assets/images/icon-delete.svg" alt="Delete icon" />

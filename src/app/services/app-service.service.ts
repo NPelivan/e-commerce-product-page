@@ -30,4 +30,10 @@ export class AppServiceService {
       this.notification = true;
     }
   }
+
+  deleteProduct() {
+    this.numberOfItems = 0;
+    this.inCartItem = false;
+    this.notification = false;
+  }
 }
