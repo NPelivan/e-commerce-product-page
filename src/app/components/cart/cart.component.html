@@ -20,7 +20,11 @@
         </span>
       </div>
 
-      <img src="../../../assets/images/icon-delete.svg" alt="Delete icon" />
+      <img
+        (click)="appService.deleteProduct()"
+        src="../../../assets/images/icon-delete.svg"
+        alt="Delete icon"
+      />
     </div>
 
     <button>Checkout</button>

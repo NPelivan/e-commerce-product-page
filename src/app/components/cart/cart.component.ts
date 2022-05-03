@@ -10,4 +10,8 @@ export class CartComponent implements OnInit {
   constructor(public appService: AppServiceService) {}
 
   ngOnInit(): void {}
+
+  deleteProduct() {
+    this.appService.deleteProduct();
+  }
 }
