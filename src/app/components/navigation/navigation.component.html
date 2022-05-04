@@ -15,7 +15,7 @@
         src="../../assets/images/icon-cart.svg"
         alt="Cart icon"
       />
-      <span *ngIf="appService.notification">{{
+      <span class="notification" *ngIf="appService.notification">{{
         appService.numberOfItems
       }}</span>
       <app-cart class="cart-popup" *ngIf="cartPopup"></app-cart>

@@ -1,0 +1,74 @@
+@use "../../assets/scss/colors" as *;
+
+.cart {
+  &__header {
+    padding: 6%;
+    margin: 0;
+    border-bottom: 1px solid rgba(182, 188, 200, 0.3);
+    font-size: 20px;
+  }
+
+  &__empty {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    text-align: center;
+    font-weight: 900;
+    color: $darkGrayishBlue;
+  }
+
+  &__inCart {
+    &__products {
+      display: flex;
+      padding: 6%;
+      align-items: center;
+      justify-content: space-between;
+
+      &__thumbnail {
+        width: 20%;
+        border-radius: 8px;
+        height: fit-content;
+      }
+
+      &__product-items {
+        padding-left: 5%;
+        padding-right: 5%;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 5%;
+        }
+
+        p,
+        .cart-price,
+        .number-of-items {
+          color: $darkGrayishBlue;
+        }
+
+        .total-products {
+          color: $black;
+          padding-left: 4%;
+        }
+      }
+
+      &__trash {
+        width: 5%;
+        height: fit-content;
+        cursor: pointer;
+      }
+    }
+
+    &__checkout {
+      margin-left: 6%;
+      margin-right: 6%;
+      margin-bottom: 6%;
+      width: 88%;
+      padding: 4%;
+      color: $white;
+      background-color: $orange;
+      border: 0;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AppServiceService {
   items = 0;
-  inCartItem: any;
+  inCartItem: any = false;
   totalProducts: any;
   notification: any = false;
   numberOfItems: any;
