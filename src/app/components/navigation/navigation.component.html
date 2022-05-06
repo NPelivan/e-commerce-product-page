@@ -31,10 +31,28 @@
 
 <nav class="mobile-nav">
   <img
+    (click)="navPopup = true"
     class="mob-hamburger"
     src="../../../assets/images/icon-menu.svg"
     alt="Menu icon"
   />
+
+  <div class="mobile-navbar" *ngIf="navPopup">
+    <img
+      (click)="navPopup = false"
+      src="../../../assets/images/icon-close.svg"
+      alt="Close"
+    />
+
+    <ul>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Woman</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
   <img class="mob-logo" src="../../../assets/images/logo.svg" alt="Logo icon" />
 
   <img

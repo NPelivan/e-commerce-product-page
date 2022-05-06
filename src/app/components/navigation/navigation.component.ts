@@ -8,6 +8,7 @@ import { AppServiceService } from 'src/app/services/app-service.service';
 })
 export class NavigationComponent implements OnInit {
   cartPopup = false;
+  navPopup = false;
   constructor(public appService: AppServiceService) {}
 
   ngOnInit(): void {}
