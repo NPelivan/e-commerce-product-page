@@ -18,6 +18,11 @@
     width: 85%;
   }
 
+  @media (max-width: 712px) {
+    display: block;
+    width: 100%;
+  }
+
   .popup-window {
     position: absolute;
     left: 0;
@@ -96,8 +101,42 @@
     }
   }
 
+  &__item:nth-of-type(1) {
+    @media (max-width: 712px) {
+      display: none;
+    }
+  }
+
+  .mob-image {
+    @media (min-width: 711px) {
+      display: none;
+    }
+    display: flex;
+    width: 100%;
+
+    .mob-hero-image {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 50vh;
+    }
+
+    .mob-arrow {
+      position: relative;
+
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__item {
     width: 50%;
+
+    @media (max-width: 711px) {
+      width: 100%;
+    }
 
     &__image-big {
       img {

@@ -1,5 +1,36 @@
 @use "../../assets/scss/colors" as *;
 
+.notification {
+  background-color: $orange;
+  padding: 1% 10%;
+  font-size: 10px;
+  color: $white;
+  font-weight: 900;
+  border-radius: 8px;
+  position: relative;
+  bottom: 16px;
+  right: 13px;
+}
+
+.cart-popup {
+  position: absolute;
+  top: 10%;
+  right: 12%;
+  box-shadow: 0px 8px 22px 3px rgba(0, 0, 0, 0.15);
+  width: 25%;
+  background-color: $white;
+  border-radius: 10px;
+
+  @media (max-width: 919px) {
+    width: 30%;
+  }
+
+  @media (max-width: 769px) {
+    right: 5%;
+    width: 40%;
+  }
+}
+
 .navbar {
   display: flex;
   width: 70%;
@@ -81,37 +112,6 @@
         filter: brightness(0%);
         cursor: pointer;
       }
-
-      .notification {
-        background-color: $orange;
-        padding: 1% 10%;
-        font-size: 10px;
-        color: $white;
-        font-weight: 900;
-        border-radius: 8px;
-        position: relative;
-        bottom: 16px;
-        right: 13px;
-      }
-
-      .cart-popup {
-        position: absolute;
-        top: 10%;
-        right: 12%;
-        box-shadow: 0px 8px 22px 3px rgba(0, 0, 0, 0.15);
-        width: 25%;
-        background-color: $white;
-        border-radius: 10px;
-
-        @media (max-width: 919px) {
-          width: 30%;
-        }
-
-        @media (max-width: 769px) {
-          right: 5%;
-          width: 40%;
-        }
-      }
     }
 
     .avatar {
@@ -131,30 +131,90 @@
   @media (min-width: 712px) {
     display: none;
   }
-
-  width: 90%;
-  margin: auto;
-
   display: flex;
+  width: 90%;
+  margin: 5% auto 5%;
+  justify-content: space-between;
   align-items: center;
 
-  img {
-    height: fit-content;
-  }
+  &__flex-item {
+    display: flex;
+    width: 30%;
+    align-items: center;
 
-  .mob-hamburger {
-    margin-right: 4%;
-  }
+    img {
+      height: fit-content;
+    }
 
-  .mob-cart {
-    margin-left: 32%;
-    margin-right: 6%;
-  }
+    .mob-hamburger {
+      width: 100%;
+    }
 
-  .mob-avatar {
-    width: 10%;
+    .mob-logo {
+      width: 100%;
+      margin-left: 15%;
+    }
+
+    .mob-cart {
+      margin-right: 18%;
+      z-index: 100;
+
+      .mob-notification {
+        position: relative;
+        top: -35px;
+        left: 10px;
+        padding: 0 30%;
+        height: 0;
+      }
+
+      .mob-cart-popup {
+        width: 90%;
+        top: 70px;
+      }
+    }
+
+    .mob-avatar {
+      width: 25%;
+    }
   }
 
   .mobile-navbar {
+    position: absolute;
+    top: 0;
+    bottom: -8px;
+    left: 0;
+    right: -5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+
+    &__window {
+      width: 70%;
+      background-color: $white;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      padding: 6%;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 15%;
+
+        li {
+          padding: 5% 0;
+
+          a {
+            text-decoration: none;
+            color: $black;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+
+  &__flex-item:nth-of-type(2) {
+    justify-content: flex-end;
   }
 }

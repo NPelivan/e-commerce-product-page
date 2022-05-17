@@ -75,6 +75,22 @@
     </div>
   </div>
 
+  <div class="main-container__item mob-image">
+    <img
+      src="../../assets/images/icon-previous.svg"
+      (click)="previousImage()"
+      alt=""
+      class="mob-arrow"
+    />
+    <img [src]="image" alt="" class="mob-hero-image" />
+    <img
+      src="../../assets/images/icon-next.svg"
+      (click)="nextImage()"
+      class="mob-arrow"
+      alt=""
+    />
+  </div>
+
   <div class="main-container__item">
     <span class="main-container__item__sneaker">Sneaker Company</span>
     <h1 class="main-container__item__header">Fall Limited Edition Sneakers</h1>

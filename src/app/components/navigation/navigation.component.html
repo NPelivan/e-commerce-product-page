@@ -30,39 +30,57 @@
 </nav>
 
 <nav class="mobile-nav">
-  <img
-    (click)="navPopup = true"
-    class="mob-hamburger"
-    src="../../../assets/images/icon-menu.svg"
-    alt="Menu icon"
-  />
-
-  <div class="mobile-navbar" *ngIf="navPopup">
+  <div class="mobile-nav__flex-item">
     <img
-      (click)="navPopup = false"
-      src="../../../assets/images/icon-close.svg"
-      alt="Close"
+      (click)="navPopup = true"
+      class="mob-hamburger"
+      src="../../../assets/images/icon-menu.svg"
+      alt="Menu icon"
     />
 
-    <ul>
-      <li><a href="#">Collections</a></li>
-      <li><a href="#">Men</a></li>
-      <li><a href="#">Woman</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    <div class="mobile-navbar" *ngIf="navPopup">
+      <div class="mobile-navbar__window">
+        <img
+          (click)="navPopup = false"
+          src="../../../assets/images/icon-close.svg"
+          alt="Close"
+        />
+
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Woman</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <img
+      class="mob-logo"
+      src="../../../assets/images/logo.svg"
+      alt="Logo icon"
+    />
   </div>
 
-  <img class="mob-logo" src="../../../assets/images/logo.svg" alt="Logo icon" />
-
-  <img
-    class="mob-cart"
-    src="../../../assets/images/icon-cart.svg"
-    alt="Cart icon"
-  />
-  <img
-    class="mob-avatar"
-    src="../../../assets/images/image-avatar.png"
-    alt="User icon"
-  />
+  <div class="mobile-nav__flex-item">
+    <div class="mob-cart">
+      <img
+        (click)="cartPopup = !cartPopup"
+        src="../../../assets/images/icon-cart.svg"
+        alt="Cart icon"
+      />
+      <span
+        class="notification mob-notification"
+        *ngIf="appService.notification"
+        >{{ appService.numberOfItems }}</span
+      >
+      <app-cart class="cart-popup mob-cart-popup" *ngIf="cartPopup"></app-cart>
+    </div>
+    <img
+      class="mob-avatar"
+      src="../../../assets/images/image-avatar.png"
+      alt="User icon"
+    />
+  </div>
 </nav>
