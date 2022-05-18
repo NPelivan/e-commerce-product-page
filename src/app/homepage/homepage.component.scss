@@ -113,6 +113,7 @@
     }
     display: flex;
     width: 100%;
+    height: 54vh;
 
     .mob-hero-image {
       width: 100%;
@@ -123,11 +124,21 @@
     }
 
     .mob-arrow {
-      position: relative;
-
+      position: absolute;
+      left: 5%;
+      top: 33%;
       z-index: 10;
-      display: flex;
-      justify-content: space-between;
+      background-color: $white;
+      padding: 3%;
+      border-radius: 100%;
+    }
+
+    .arrow-next {
+      position: absolute;
+      right: 0%;
+      left: 86%;
+      top: 33%;
+      z-index: 10;
     }
   }
 
@@ -135,7 +146,8 @@
     width: 50%;
 
     @media (max-width: 711px) {
-      width: 100%;
+      width: 90%;
+      margin: auto !important;
     }
 
     &__image-big {
@@ -177,6 +189,10 @@
       font-size: 50px;
       margin-top: 2%;
       margin-bottom: 6%;
+
+      @media (max-width: 711px) {
+        font-size: 40px;
+      }
     }
 
     &__text {
@@ -184,15 +200,31 @@
       line-height: 1.7rem;
     }
 
+    .price {
+      @media (max-width: 711px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
     &__price-container {
       display: flex;
       align-items: center;
       margin-bottom: 1%;
 
+      @media (max-width: 711px) {
+        margin: 0;
+      }
+
       &__price {
         font-size: 25px;
         font-weight: 700;
         margin-right: 3%;
+
+        @media (max-width: 711px) {
+          margin-right: 10%;
+        }
       }
 
       &__discount {
@@ -202,6 +234,10 @@
         padding: 0.4% 1.3%;
         font-size: 15px;
         border-radius: 5px;
+
+        @media (max-width: 711px) {
+          padding: 2% 5%;
+        }
       }
     }
 
@@ -217,6 +253,10 @@
       align-items: center;
       margin-top: 7%;
 
+      @media (max-width: 711px) {
+        display: block;
+      }
+
       &__counter {
         background-color: $lightGrayishBlue;
         width: 28%;
@@ -225,6 +265,13 @@
         padding: 3% 2%;
         border-radius: 10px;
         margin-right: 3%;
+
+        @media (max-width: 711px) {
+          width: 100%;
+          margin-bottom: 4%;
+          padding-top: 5%;
+          padding-bottom: 5%;
+        }
 
         button {
           background-color: transparent !important;
@@ -251,6 +298,13 @@
         cursor: pointer;
 
         box-shadow: 0px 24px 31px -10px rgba(255, 125, 26, 0.36);
+
+        @media (max-width: 711px) {
+          width: 100%;
+          padding-top: 5%;
+          padding-bottom: 5%;
+          margin-bottom: 20%;
+        }
 
         img {
           filter: brightness(0) invert(1);

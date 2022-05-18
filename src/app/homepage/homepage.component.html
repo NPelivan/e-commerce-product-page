@@ -86,8 +86,8 @@
     <img
       src="../../assets/images/icon-next.svg"
       (click)="nextImage()"
-      class="mob-arrow"
       alt=""
+      class="mob-arrow arrow-next"
     />
   </div>
 
@@ -99,12 +99,15 @@
       Featuring a durable rubber outer sole, they’ll withstand everything the
       weather can offer.
     </p>
-    <div class="main-container__item__price-container">
-      <span class="main-container__item__price-container__price">$125.00</span>
-      <span class="main-container__item__price-container__discount">50%</span>
+    <div class="price">
+      <div class="main-container__item__price-container">
+        <span class="main-container__item__price-container__price"
+          >$125.00</span
+        >
+        <span class="main-container__item__price-container__discount">50%</span>
+      </div>
+      <span class="main-container__item__price-before">$250.00</span>
     </div>
-    <span class="main-container__item__price-before">$250.00</span>
-
     <div class="main-container__item__number-container">
       <div class="main-container__item__number-container__counter">
         <button (click)="appService.decreaseItem()">
